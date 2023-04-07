@@ -1,0 +1,87 @@
+#root {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+
+}
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 66px;
+}
+
+.logo {
+  width: 60px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.main-page {
+  width: 100%;
+  text-align: center;
+  font-size: large;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.footer {
+  background-color: #212529;
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  margin-bottom: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  
+}
+
+.social {
+  font-size: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.text-footer {
+  font-size: 13px;
+}
+
+
+.tareas {
+  text-align: center;
+  padding: 2px;
+  font-size: 15px;
+  border: 1px solid white;
+  border-radius: 20px;
+  background-color: #212529;
+  color: white;
+}
+
+.news {
+  font-size: medium;
+  text-align: left;
+  min-width: 100%;
+  min-height: 10vh;
+  background-color: #212529;
+}
+
+.product-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.info {
+  font-size: 10px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+
+
+
+
+
