@@ -5,8 +5,12 @@ export default function Footer() {
   return (
     <div className='footer'>
         <div className='social'>
-            <Facebook />
-            <Instagram />
+            <a href="https://web.facebook.com/sweetstogo/">
+              <Facebook />
+            </a>
+            <a href="http://instagram.com/gohantogo/">
+              <Instagram />
+            </a>
             <a href="https://wa.me/56956227442">
               <Whatsapp />
             </a>

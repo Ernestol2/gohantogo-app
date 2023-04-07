@@ -21,7 +21,7 @@ export default function Navigation() {
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/products">Products</Nav.Link>
-            <Nav.Link href="/tasks">Tareas</Nav.Link>
+            <Nav.Link href="/menu">Menu</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
