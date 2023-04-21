@@ -1,29 +1,31 @@
-import { Container, Nav, Navbar, Badge } from "react-bootstrap";
+import { Container, Nav, Navbar, Badge, Button } from "react-bootstrap";
 import { Cart } from "react-bootstrap-icons";
+import {Link} from 'react-router-dom';
 import logo from "../images/logo.jpg";
+import {useStateValue} from '../StateProvider'
 
 export default function Navigation() {
+
+  const [{basket}, dispatch] = useStateValue();
+
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar sticky="top" expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="/" className="logo-container"> 
+        <Link to="/" className="logo-container"> 
           <img 
             src={logo} 
             alt="logo" 
             className="logo" />
-        </Navbar.Brand>
-        <div>
-        <Cart color="white" size={30}/>
-        <Badge bg="danger">3</Badge>
+        </Link>
+        <div className="m-2">
+        <Link to="/checkout-page">
+          <Cart color="white" size={30}/>
+        </Link>
+        <Badge pill bg="danger">{basket?.length}</Badge>{' '}
+        <Link to="/sign-in">
+          <Button variant="outline-light">SIGN IN</Button>
+        </Link>
         </div>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/products">Products</Nav.Link>
-            <Nav.Link href="/menu">Menu</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
       </Container>
     </Navbar>
   );

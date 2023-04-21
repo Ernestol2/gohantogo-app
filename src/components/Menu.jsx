@@ -1,18 +1,17 @@
-import React from 'react'
-import { ConeStriped } from 'react-bootstrap-icons'
+import Accordion from 'react-bootstrap/Accordion';
+import Product from './Product';
 
-export default function Menu() {
+function Menu() {
   return (
-  <>
-  <div className='menu'>
-      <div>
-      <h1>Under Construction</h1>
-      </div>
-      <div>
-        <ConeStriped size={80} />
-      </div>
-  </div>
-  </>
-
-  )
+    <Accordion className='menu'>
+      <Accordion.Item eventKey="0">
+        <Accordion.Header>Entradas</Accordion.Header>
+        <Accordion.Body>
+          <Product />
+        </Accordion.Body>
+      </Accordion.Item>
+    </Accordion>
+  );
 }
+
+export default Menu;

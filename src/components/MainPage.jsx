@@ -1,12 +1,11 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import {Book} from 'react-bootstrap-icons';
 import sushi from "../images/bg-sushi.jpg";
+import { Link } from "react-router-dom";
 
 const myStyle = {
   backgroundImage: `url(${sushi})`,
-  height: "65vh",
+  height: "55vh",
   backgroundSize: "cover",
   backgroundRepeat: "no-repeat",
 };
@@ -23,50 +22,11 @@ export default function MainPage() {
           PRUEBA LAS MEJORES TORTAS DE SUSHI.
         </h4>
       </div>
-      <div>
-        <Container className="text-light p-3 news">
-          <Row>
-            <Col sm={4} xs={12}>
-              <h6>TITULO 1</h6>
-              <hr />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-                fuga dolores, error explicabo nesciunt totam magnam
-                necessitatibus unde! Impedit, aut ipsum ea quis commodi possimus
-                similique atque placeat! At quam sequi alias accusantium iste,
-                voluptatem repudiandae, impedit fugit deserunt repellendus
-                ratione ducimus enim exercitationem atque architecto maiores
-                incidunt vitae. Ut.
-              </p>
-            </Col>
-            <Col sm={4} xs={12}>
-              <h6>TITULO 2</h6>
-              <hr />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-                fuga dolores, error explicabo nesciunt totam magnam
-                necessitatibus unde! Impedit, aut ipsum ea quis commodi possimus
-                similique atque placeat! At quam sequi alias accusantium iste,
-                voluptatem repudiandae, impedit fugit deserunt repellendus
-                ratione ducimus enim exercitationem atque architecto maiores
-                incidunt vitae. Ut.
-              </p>
-            </Col>
-            <Col sm={4} xs={12}>
-              <h6>TITULO 3</h6>
-              <hr />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-                fuga dolores, error explicabo nesciunt totam magnam
-                necessitatibus unde! Impedit, aut ipsum ea quis commodi possimus
-                similique atque placeat! At quam sequi alias accusantium iste,
-                voluptatem repudiandae, impedit fugit deserunt repellendus
-                ratione ducimus enim exercitationem atque architecto maiores
-                incidunt vitae. Ut.
-              </p>
-            </Col>
-          </Row>
-        </Container>
+      <div className="main-menu-link">
+        <Link to="/menu">
+        <Book color="white"/>
+        Menu
+        </Link>
       </div>
     </div>
   );

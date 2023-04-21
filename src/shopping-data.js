@@ -12,98 +12,98 @@ import promo120 from './img/sushi11.jpeg'
 import promo150 from './img/sushi12.jpeg'
 import promo200 from './img/sushi13.jpeg'
 
-const products = [
+const shop = [
     {
         id: 0,
         name: 'Promo 30 piezas',
         description: '10 piezas de camaron envueltas en sesamo y 10 piezas de salmon envueltas en palta y 10 piezas de pollo en panko(frito)',
         img: promo10,
-        price: '$13000'
+        price: 13000
     },
     {
         id: 1,
         name: 'Promo 30 piezas',
         description: '10 piezas de camaron envueltas en sesamo y 10 piezas de salmon envueltas en palta y 10 piezas de pollo en panko(frito)',
         img: promo20,
-        price: '$13000'
+        price: 13000
     },
     {
         id: 2,
         name: 'Promo 30 piezas',
         description: '10 piezas de camaron envueltas en sesamo y 10 piezas de salmon envueltas en palta y 10 piezas de pollo en panko(frito)',
         img: promo30,
-        price: 'valor: $13000'
+        price: 13000
     },
     {
         id: 3,
         name: 'Promo 30 piezas',
         description: '10 piezas de camaron envueltas en sesamo y 10 piezas de salmon envueltas en palta y 10 piezas de pollo en panko(frito)',
         img: promo40,
-        price: 'valor: $13000'
+        price: 12000
     },
     {
         id: 4,
         name: 'Promo 30 piezas',
         description: '10 piezas de camaron envueltas en sesamo y 10 piezas de salmon envueltas en palta y 10 piezas de pollo en panko(frito)',
         img: promo50,
-        price: 'valor: $13000'
+        price: 18000
     },
     {
         id: 5,
         name: 'Promo 30 piezas',
         description: '10 piezas de camaron envueltas en sesamo y 10 piezas de salmon envueltas en palta y 10 piezas de pollo en panko(frito)',
         img: promo60,
-        price: 'valor: $13000'
+        price: 19000
     },
     {
         id: 6,
         name: 'Promo 30 piezas',
         description: '10 piezas de camaron envueltas en sesamo y 10 piezas de salmon envueltas en palta y 10 piezas de pollo en panko(frito)',
         img: promo70,
-        price: 'valor: $13000'
+        price: 22000
     },
     {
         id: 7,
         name: 'Promo 30 piezas',
         description: '10 piezas de camaron envueltas en sesamo y 10 piezas de salmon envueltas en palta y 10 piezas de pollo en panko(frito)',
         img: promo80,
-        price: 'valor: $13000'
+        price: 30000
     },
     {
         id: 8,
         name: 'Promo 30 piezas',
         description: '10 piezas de camaron envueltas en sesamo y 10 piezas de salmon envueltas en palta y 10 piezas de pollo en panko(frito)',
         img: promo90,
-        price: 'valor: $13000'
+        price: 43000
     },
     {
         id: 9,
         name: 'Promo 30 piezas',
         description: '10 piezas de camaron envueltas en sesamo y 10 piezas de salmon envueltas en palta y 10 piezas de pollo en panko(frito)',
         img: promo100,
-        price: 'valor: $13000'
+        price: 53000
     },
     {
         id: 10,
         name: 'Promo 30 piezas',
         description: '10 piezas de camaron envueltas en sesamo y 10 piezas de salmon envueltas en palta y 10 piezas de pollo en panko(frito)',
         img: promo120,
-        price: 'valor: $13000'
+        price: 61000
     },
     {
         id: 11,
         name: 'Promo 30 piezas',
         description: '10 piezas de camaron envueltas en sesamo y 10 piezas de salmon envueltas en palta y 10 piezas de pollo en panko(frito)',
         img: promo150,
-        price: 'valor: $13000'
+        price: 8000
     },
     {
         id: 12,
         name: 'Promo 30 piezas',
         description: '10 piezas de camaron envueltas en sesamo y 10 piezas de salmon envueltas en palta y 10 piezas de pollo en panko(frito)',
         img: promo200,
-        price: 'valor: $13000'
+        price: 4000
     }
 ]
 
-export default products;
+export default shop;
