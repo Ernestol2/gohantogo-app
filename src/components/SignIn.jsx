@@ -42,7 +42,7 @@ export default function SignIn() {
         if(credentials){
             setTimeout(() => {
                 window.location.href = "/menu"
-            }, 2000)
+            }, 1000)
         }
       })
       .catch(err => {

@@ -14,13 +14,16 @@ export default function Total() {
         <h6>{basket?.length} productos</h6>
         <h6>$ {getTotal(basket)}</h6>
         <hr />
-        <Button className='m-2' variant='danger'>Ir a pagar</Button>
+        <Link to="/checkout">
+          <Button className='m-2' variant='danger'>
+            Ir a pagar
+          </Button>
+        </Link>
         <Link to="/menu">
-          <Button variant='success'>Seguir Comprando</Button>
+          <Button variant='success'>
+            Seguir Comprando
+          </Button>
         </Link>
     </>
   )
 }
-
-
-//problema con obtener el total de la compra
