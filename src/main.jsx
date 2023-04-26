@@ -5,12 +5,14 @@ import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import { StateProvider } from './StateProvider'
 import reducer, { initialState } from './reducer'
+import ScrollToTop from './components/ScrollToTop'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <StateProvider initialState={initialState} reducer={reducer}>
       <BrowserRouter>
-        <App />
+        <ScrollToTop />
+          <App />
       </BrowserRouter>
     </StateProvider>
   </React.StrictMode>,
