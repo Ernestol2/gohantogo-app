@@ -11,7 +11,7 @@ export default function CheckoutPage() {
     return (
       <Row>
         {basket?.map((item) => (
-          <Col className="g-2 m-2" key={item.id} xs={12} sm={6} md={6} lg={4}>
+          <Col className="g-2 m-2" key={item.id} xs={12} sm={12} md={12} lg={12}>
             <CheckoutCard className="g-2" product={item} />
           </Col>
         ))}
@@ -20,7 +20,7 @@ export default function CheckoutPage() {
   }
 
   return (
-    <div className="checkout-page">
+    <div className="checkout-page text-light">
       <Container>
         <Row>
           <Col xs={12} className="text-center m-2">
@@ -29,10 +29,10 @@ export default function CheckoutPage() {
             </h1>
             <hr />
           </Col>
-          <Col xs={6} sm={8} md={9}>
+          <Col xs={12} sm={8} md={9}>
             <ProductsGrid />
           </Col>
-          <Col className="checkout-total" xs={6} sm={4} md={3}>
+          <Col className="checkout-total" xs={12} sm={4} md={3}>
             <Total />
           </Col>
         </Row>

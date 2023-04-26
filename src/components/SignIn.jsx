@@ -19,11 +19,10 @@ function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
-      <Link to="https://mui.com/">
-        Your Website
+      <Link to="">
+        Gohan & Sushi To Go
       </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
+      2023.
     </Typography>
   );
 }
@@ -56,13 +55,13 @@ export default function SignIn() {
         <CssBaseline />
         <Box
           sx={{
-            marginTop: 8,
+            marginTop: 2,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+          <Avatar sx={{ m: 1, bgcolor: 'info.dark' }}>
             
           </Avatar>
           <Typography component="h1" variant="h5">
@@ -113,7 +112,7 @@ export default function SignIn() {
               </Grid>
               <Grid item>
                 <Link to="/sign-up">
-                  {"Don't have an account? Sign Up"}
+                  {"No tienes cuenta? Haz Sign Up"}
                 </Link>
               </Grid>
             </Grid>

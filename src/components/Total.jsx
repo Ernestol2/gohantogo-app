@@ -10,9 +10,8 @@ export default function Total() {
 
   return (
     <>
-        <h4><strong>Productos:</strong></h4>
-        <h6>{basket?.length} productos</h6>
-        <h6>$ {getTotal(basket)}</h6>
+        <h5><strong>Productos: {basket?.length}</strong></h5>
+        <h6>TOTAL: $ {getTotal(basket)}</h6>
         <hr />
         <Link to="/checkout">
           <Button className='m-2' variant='danger'>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import CardGroup from "react-bootstrap/CardGroup";
@@ -6,9 +6,10 @@ import { Cart3 } from "react-bootstrap-icons";
 import { actionTypes } from "../reducer";
 import {useStateValue} from '../StateProvider';
 
-export default function Products({product: {id, img, name, price}}) {
+export default function Products({product}) {
   
   const [{basket}, dispatch] = useStateValue();
+  const {id, name, price, img} = product; 
   
   const addToBasket = () => {
     dispatch({
