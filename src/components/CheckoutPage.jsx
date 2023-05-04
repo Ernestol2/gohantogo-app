@@ -19,6 +19,7 @@ export default function CheckoutPage() {
     );
   }
 
+
   return (
     <div className="checkout-page text-light">
       <Container>

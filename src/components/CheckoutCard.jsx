@@ -1,15 +1,12 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-import CardGroup from "react-bootstrap/CardGroup";
+import { Card, Button } from "react-bootstrap";
 import { Trash } from "react-bootstrap-icons";
 import { useStateValue } from "../StateProvider";
 import {actionTypes} from "../reducer"
 
-export default function CheckoutCard({
-  product: {id, img, name, price},
-}) {
-  
+export default function CheckoutCard({ product }) {
+
+  const { id, img, name, price } = product;
   const [{basket}, dispatch] = useStateValue();
 
   const removeItem = () => dispatch ({
@@ -17,15 +14,45 @@ export default function CheckoutCard({
     id: id,
   })
 
+
+  const incrementProdcut = () => {
+    const itemIndex = basket.findIndex(item => item.id === id);
+      if (itemIndex >= 0) {
+        const updatedBasket = [...basket];
+        updatedBasket[itemIndex] = { ...updatedBasket[itemIndex], quantity: updatedBasket[itemIndex].quantity + 1 };
+        dispatch({ 
+          type: actionTypes.SET_BASKET, 
+          basket: updatedBasket, 
+        });
+      }
+  }
+
+  const decrementProduct = () => {
+    const itemIndex = basket.findIndex(item => item.id === id);
+      if (itemIndex >= 0) {
+        const updatedBasket = [...basket];
+        updatedBasket[itemIndex] = { ...updatedBasket[itemIndex], quantity: updatedBasket[itemIndex].quantity - 1 };
+        dispatch({ 
+          type: actionTypes.SET_BASKET, 
+          basket: updatedBasket, 
+        });
+      }
+  }
+
   return (
     <>
         <section className="checkout-card">
             <div className="checkout-card-left">
               <img src={img} alt={name} className="checkout-img"/>
               <div>
-              <Button variant="secondary">+</Button>
-              <Button variant="secondary">1</Button>
-              <Button variant="secondary">-</Button>
+                <Button 
+                  onClick={incrementProdcut} 
+                  variant="secondary">+</Button>
+                <Button variant="secondary">{product.quantity}</Button>
+                <Button 
+                  onClick={decrementProduct}
+                  disabled={product.quantity === 1} 
+                  variant="secondary">-</Button>
               </div>
             </div>
             <div>
@@ -43,20 +70,3 @@ export default function CheckoutCard({
 }
 
 
-
-{/*
-  <Card className="cheackout-card bg-light w-80">
-              <Card.Img variant="top" src={img} className="product-img" />
-              <Card.Body className="products-info d-flex justify-content-between">
-                <div>
-                <Card.Text>{name}</Card.Text>
-                <Card.Text>{price}</Card.Text>
-                </div>
-                <div className="d-flex align-items-end">
-                <Button variant="outline-dark" onClick={removeItem}>
-                  <Trash color="dark" size={22}/>
-                </Button>
-                </div>
-              </Card.Body>
-            </Card>
-*/}

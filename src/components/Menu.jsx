@@ -2,6 +2,8 @@ import Accordion from 'react-bootstrap/Accordion';
 import Product from './Product';
 
 function Menu() {
+      
+
   return (
     <Accordion className='menu'>
       <Accordion.Item eventKey="0">

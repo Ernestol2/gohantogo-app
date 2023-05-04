@@ -9,9 +9,9 @@ export default function Product() {
     <Container>
         <Row className='m-0'>
             {products?.map(product => (
-                <Col className='g-3' key={product.id} xs={6} md={4} lg={3}>
-                    <Products product={product}/>
-                </Col>
+              <Col key={product.id} className='g-3'  xs={6} md={4} lg={3}>
+                <Products product={product}/>
+              </Col>
             ))}
         </Row>
     </Container>

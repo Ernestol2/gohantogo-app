@@ -43,7 +43,7 @@ export default function Navigation() {
         <Link to="/checkout-page">
           <Cart color="white" size={30}/>
         </Link>
-        <Badge pill bg="danger">{basket?.length}</Badge>{' '}
+        <Badge pill bg="danger">{basket?.reduce((acc, item) => item.quantity + acc, 0)}</Badge>{' '}
         <Link to="/sign-in">
           <Button 
             variant="outline-light"
