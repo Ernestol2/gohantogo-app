@@ -1,5 +1,5 @@
 export const initialState = {
-  basket: [],
+  basket: JSON.parse(localStorage.getItem("basket")) || [],
   user: null,
 };
 

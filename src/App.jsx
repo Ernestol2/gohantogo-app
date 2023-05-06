@@ -1,7 +1,7 @@
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route } from 'react-router-dom';  
-import React, {useEffect} from 'react';
+import React, { useEffect, useState } from 'react';
 import Menu from './components/Menu';
 import Footer from './components/Footer';
 import MainPage from './components/MainPage';
@@ -18,6 +18,7 @@ import Checkout from './components/CheckoutForm/Checkout';
 function App() {
 
   const [{user}, dispatch] = useStateValue();
+  
 
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
